@@ -29,7 +29,7 @@ public class UserValidation
 			dob18.setTime(dob);
 			dob18.add(Calendar.YEAR, 18);
 			Date currentDate = new Date();
-			return dob18.after(currentDate);
+			return dob18.getTime().after(currentDate);
 		} 
 		catch (ParseException e) 
 		{
@@ -54,7 +54,7 @@ public class UserValidation
 	
 	public boolean isValidUserName()
 	{
-		String pattern= "^[a-zA-Z0-9]*$";
+		String pattern = "^[a-zA-Z0-9]*$";
 	    return user.getUserName().matches(pattern);
 	}
 	
