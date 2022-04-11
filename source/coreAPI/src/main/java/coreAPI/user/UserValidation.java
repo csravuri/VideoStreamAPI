@@ -60,7 +60,7 @@ public class UserValidation
 	
 	public boolean isValidPassword()
 	{
-		String pattern= "^(?=.*[A-Za-z])(?=.*\\d)[A-Z\\d]{8,}$";
+		String pattern= "^(?=.*[A-Z])(?=.*\\d)(.*){8,}$";
 	    return user.getPassword().matches(pattern);
 	}
 	
