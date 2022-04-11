@@ -13,15 +13,14 @@ public class TestUserValidation
 	void beforeTest()
 	{
 		user = new User();
-		validation = new UserValidation(user);
-		
+		validation = new UserValidation(user);		
 	}
 	
 	User user;
 	UserValidation validation;
 
 	@Test
-	void TestIsValidUserName()
+	void testIsValidUserName()
 	{		
 		user.setUserName("venkat12");
 		assertTrue("When user name has valid lettes", validation.isValidUserName());
@@ -34,7 +33,7 @@ public class TestUserValidation
 	}
 	
 	@Test
-	void TestIsValidPassword()
+	void testIsValidPassword()
 	{
 		user.setPassword("Venkat@1");
 		assertTrue("When password has valid lettes", validation.isValidPassword());
@@ -56,7 +55,7 @@ public class TestUserValidation
 	}
 	
 	@Test
-	void TestIsValidEmail()
+	void testIsValidEmail()
 	{
 		user.setEmail("venkata@gmail.com");
 		assertTrue("When Email has valid lettes", validation.isValidEmail());
@@ -72,7 +71,7 @@ public class TestUserValidation
 	}
 	
 	@Test
-	void TestIsValidDOB()
+	void testIsValidDOB()
 	{
 		user.setDateOfBirth("1994-04-25");
 		assertTrue("When DOB is valid", validation.isValidDOB());
@@ -88,7 +87,7 @@ public class TestUserValidation
 	}
 	
 	@Test
-	void TestIsValidCreditCard()
+	void testIsValidCreditCard()
 	{
 		user.setCreditCardNumber("1234567899874564");
 		assertTrue("When CreditCard is valid", validation.isValidCreditCard());
@@ -104,7 +103,7 @@ public class TestUserValidation
 	}
 	
 	@Test
-	void TestisUserAgeUnder18()
+	void testIsUserAgeUnder18()
 	{
 		user.setDateOfBirth("2019-04-25");
 		assertTrue("When age is valid", validation.isUserAgeUnder18());
@@ -114,7 +113,7 @@ public class TestUserValidation
 	}
 	
 	@Test
-	void TestisUserNameAlreadyExist()
+	void testIsUserNameAlreadyExist()
 	{
 		List<User> users = new ArrayList<User>();
 		
