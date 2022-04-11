@@ -58,7 +58,6 @@ public class TestUserValidation
 	@Test
 	void TestIsValidEmail()
 	{
-		//fail("add your test");
 		user.setEmail("venkata@gmail.com");
 		assertTrue("When Email has valid lettes", validation.isValidEmail());
 		
@@ -75,7 +74,6 @@ public class TestUserValidation
 	@Test
 	void TestIsValidDOB()
 	{
-		//fail("add your test");
 		user.setDateOfBirth("1994-04-25");
 		assertTrue("When DOB is valid", validation.isValidDOB());
 		
