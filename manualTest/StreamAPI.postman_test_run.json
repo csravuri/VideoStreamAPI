@@ -1,0 +1,370 @@
+{
+	"id": "d55887f2-6cca-4bb9-9ceb-9c6f7e125431",
+	"name": "StreamAPI",
+	"timestamp": "2022-04-11T17:09:47.162Z",
+	"collection_id": "0-aa489e9f-6664-4d02-af15-d46d552271d8",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ec3e0d6c-7e72-492d-8582-0cfe35fd99bd",
+			"name": "getUsers",
+			"url": "http://localhost:8080/users/",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				95
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5c8f6491-70c0-4b1d-8e84-73b97b720dd9",
+			"name": "getUsersCredYes",
+			"url": "http://localhost:8080/users/?CreditCard=yes",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3eaf9c18-5d02-4a6b-9fa4-010be9f1e3e6",
+			"name": "getUsersCredNo",
+			"url": "http://localhost:8080/users/?CreditCard=no",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f241f4ff-4f3d-43cf-8321-018f5f25a565",
+			"name": "getUsersCredUnknown",
+			"url": "http://localhost:8080/users/?CreditCard=xyz",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1b901baf-7262-4981-8a33-19f4e828d977",
+			"name": "addUsersInvalidUserName",
+			"url": "http://localhost:8080/users/",
+			"time": 13,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "afe075d3-f842-4b3d-b6e2-985db6a1525b",
+			"name": "addUsersInvalidPassword",
+			"url": "http://localhost:8080/users/",
+			"time": 11,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0b6cd427-294c-41e6-b6b5-06de6d76262a",
+			"name": "addUsersInvalidEmail",
+			"url": "http://localhost:8080/users/",
+			"time": 10,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7e639ba0-fa27-41c0-b9d1-b92f9f1458f2",
+			"name": "addUsersInvalidDOB",
+			"url": "http://localhost:8080/users/",
+			"time": 9,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7551fd71-d01d-4781-b7b7-6dd806a75079",
+			"name": "addUsersInvalidCreditCard",
+			"url": "http://localhost:8080/users/",
+			"time": 12,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "caa1365d-0655-4b7f-beed-79b4b167a629",
+			"name": "addUsersUnderAge18",
+			"url": "http://localhost:8080/users/",
+			"time": 20,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "48232d9a-e608-41ce-9edf-498752a8fb6e",
+			"name": "addUsersAlreadyExists",
+			"url": "http://localhost:8080/users/",
+			"time": 10,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fd035106-877f-47eb-9fe4-326a82a6cc0a",
+			"name": "addUsersValid",
+			"url": "http://localhost:8080/users/",
+			"time": 8,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "42054ce0-01a3-4870-86e7-09d9fffe9db8",
+			"name": "addPaymentInvalidAmount",
+			"url": "http://localhost:8080/payments",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "95ae348d-b2e4-447c-bb2f-e9acca65cf53",
+			"name": "addPaymentInvalidCreditCard",
+			"url": "http://localhost:8080/payments",
+			"time": 12,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ffc52533-91bd-4a44-9020-3019634b6fbc",
+			"name": "addPaymentCredNotReg",
+			"url": "http://localhost:8080/payments",
+			"time": 9,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fbed599f-a38f-4ec3-96dd-0ff7b7f46f98",
+			"name": "addPaymentValid",
+			"url": "http://localhost:8080/payments",
+			"time": 8,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 253,
+	"collection": {
+		"requests": [
+			{
+				"id": "ec3e0d6c-7e72-492d-8582-0cfe35fd99bd",
+				"method": "GET"
+			},
+			{
+				"id": "5c8f6491-70c0-4b1d-8e84-73b97b720dd9",
+				"method": "GET"
+			},
+			{
+				"id": "3eaf9c18-5d02-4a6b-9fa4-010be9f1e3e6",
+				"method": "GET"
+			},
+			{
+				"id": "f241f4ff-4f3d-43cf-8321-018f5f25a565",
+				"method": "GET"
+			},
+			{
+				"id": "1b901baf-7262-4981-8a33-19f4e828d977",
+				"method": "POST"
+			},
+			{
+				"id": "afe075d3-f842-4b3d-b6e2-985db6a1525b",
+				"method": "POST"
+			},
+			{
+				"id": "0b6cd427-294c-41e6-b6b5-06de6d76262a",
+				"method": "POST"
+			},
+			{
+				"id": "7e639ba0-fa27-41c0-b9d1-b92f9f1458f2",
+				"method": "POST"
+			},
+			{
+				"id": "7551fd71-d01d-4781-b7b7-6dd806a75079",
+				"method": "POST"
+			},
+			{
+				"id": "caa1365d-0655-4b7f-beed-79b4b167a629",
+				"method": "POST"
+			},
+			{
+				"id": "48232d9a-e608-41ce-9edf-498752a8fb6e",
+				"method": "POST"
+			},
+			{
+				"id": "fd035106-877f-47eb-9fe4-326a82a6cc0a",
+				"method": "POST"
+			},
+			{
+				"id": "42054ce0-01a3-4870-86e7-09d9fffe9db8",
+				"method": "POST"
+			},
+			{
+				"id": "95ae348d-b2e4-447c-bb2f-e9acca65cf53",
+				"method": "POST"
+			},
+			{
+				"id": "ffc52533-91bd-4a44-9020-3019634b6fbc",
+				"method": "POST"
+			},
+			{
+				"id": "fbed599f-a38f-4ec3-96dd-0ff7b7f46f98",
+				"method": "POST"
+			}
+		]
+	}
+}
